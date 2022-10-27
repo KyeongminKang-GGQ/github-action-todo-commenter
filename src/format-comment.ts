@@ -16,12 +16,12 @@ export function formatComment(
       items.forEach(item => {
         if (item.comment === '') {
           message += `- [ ] <space> \`Line: ${item.line}\`\n`;
-          message += `${blob_url}#L${item.line}-L${item.line + 5}\n`;
+          message += `${blob_url}#L${item.line}\n`;
           // https://githubHost/owner/repo/blob/sha/filename
           return;
         }
         message += `- [ ] ${item.comment} \`Line: ${item.line}\`\n`;
-        message += `${blob_url}#L${item.line}-L${item.line + 5}\n`;
+        message += `${blob_url}#L${item.line}\n`;
         // https://githubHost/owner/repo/blob/sha/filename
       });
     });
